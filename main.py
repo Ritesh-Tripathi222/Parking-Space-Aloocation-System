@@ -62,7 +62,7 @@ class ParkingLot:
         leavingSlot = int(query[1])-1
         status=self.leavingCar(self.flag, leavingSlot)
         if status == True:
-            print("Slot number ",(leavingSlot)," vacated, the car with vehicle registration number \""+ self.vechileNumber[leavingSlot]+"\" left the space, the driver of the car was of age ",self.driverAge[leavingSlot])
+            print("Slot number ",(leavingSlot+1)," vacated, the car with vehicle registration number \""+ self.vechileNumber[leavingSlot]+"\" left the space, the driver of the car was of age ",self.driverAge[leavingSlot])
         else:
             print("Slot already vacant")
 
