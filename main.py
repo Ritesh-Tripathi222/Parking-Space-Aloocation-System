@@ -40,7 +40,7 @@ class ParkingLot:
     #Function to print all slot numbers for drivers who match the given age 
     def Slot_numbers_for_driver_of_age(self, query):
         age=int(query[1])
-        ageSlot = self.listAsPerAge(self.flag,self.driverAge, age)
+        ageSlot = self.listAsPerAge(self.flag,self.driverAge, age,slots)
         if len(ageSlot) != 0:
             for i in range(len(ageSlot)-1):
                 print(ageSlot[i],end=",")
@@ -87,9 +87,9 @@ class ParkingLot:
       return result
 
     #Function to create list of slots as per given driver age
-    def listAsPerAge(self, flag,driverAge,age):
+    def listAsPerAge(self, flag,driverAge,age,slot):
         li = []
-        for i in range(0,6):
+        for i in range(0,slot):
             if flag[i] == 1 and driverAge[i] == age:
               li.append(i+1)
         return li
