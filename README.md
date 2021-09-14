@@ -1,2 +1,2 @@
-# squadstack test for creating parking lot allotment 
+# parking lot allotment  System
 # to run code use command "python main.py"
